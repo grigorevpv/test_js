@@ -2,11 +2,11 @@
     <script type="text/javascript">
         function IsInstalled () {
             if (window.external && window.external.IsSearchProviderInstalled) {
-                var isInstalled = window.external.IsSearchProviderInstalled ("http://www.dottoro.com");
+                var isInstalled = window.external.IsSearchProviderInstalled ("https://www.go.mail.ru");
                 console.log(`is installed = ${isInstalled}`);
                 if (!isInstalled) {
-                    alert('dottoro is not intall');
-                    window.external.AddSearchProvider ("searchProvider.xml");
+                    alert('go.mail is not intall');
+                    window.external.AddSearchProvider ("searchProviderMail.xml");
                 }
             }
             else {

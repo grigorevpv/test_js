@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>Поиск Mail.Ru</ShortName>
+    <Description>Search with Поиск Mail.Ru</Description>
+    <InputEncoding>utf-8</InputEncoding>
+    <OutputEncoding>utf-8</OutputEncoding>
+    <Image width="16" height="16" type="image/icon">https://go.imgsmail.ru/favicon.ico</Image>
+    <Url type="text/html" method="GET" template="https://go.mail.ru/search?q={searchTerms}&fr=osmi"/>
+    <Url type="application/x-suggestions+json" template="https://suggests.go.mail.ru/ff3?q={searchTerms}"/>
+    <Url type="application/x-suggestions+xml" template="https://suggests.go.mail.ru/ie8?q={searchTerms}"/>
+    <Url type="application/opensearchdescription+xml" rel="self" template="https://go.mail.ru/opensearch.xml"/>
+    <moz:SearchForm>https://go.mail.ru/</moz:SearchForm>
+    </OpenSearchDescription>
+</OpenSearchDescription>
