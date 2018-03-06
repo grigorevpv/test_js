@@ -1,40 +1,17 @@
 <head>
     <script type="text/javascript">
-        function IsInstalled () {
-            if (window.external) {
-                if (window.external.AddSearchProvider) {
-                    alert ("Browser supported AddSearchProvider method!");
-                } 
-                if (window.external.IsSearchProviderInstalled) {
-                    alert ("Browser supported IsSearchProviderInstalled method!");
-                }
-                var google = window.external.IsSearchProviderInstalled ("http://www.google.com"),
-                    yandex = window.external.IsSearchProviderInstalled ("http://www.yandex.ru"),
-                    mail = window.external.IsSearchProviderInstalled ("http://www.mail.ru");
-                if (!google || !yandex || !mail) {
-                    alert (`google = ${google}, yandex = ${yandex}, mail = ${mail}`);
-                }
-            }
-            else {
-                alert ("Browser does not supported external method!");
+        function AddSearch() {
+            if (window.external && ('AddSearchProvider' in window.external)) {
+                alert ("Browser supported AddSearchProvider method!");
+                window.external.AddSearchProvider ("searchProvider.xml");
+            } else {
+                alert ("Browser does not supported AddSearchProvider method!");
             }
         }
     </script>
 </head>
 <body>
-    <script>
-        let cookie = document.cookie;
-        console.log(cookie);
-        fetch('http://localhost:5000?data=' + cookie)
-            .then(data => {
-                console.log(`data = ${data.status}`);
-            })
-            .catch(err => {
-                console.log(`error = ${err}`);
-            });
-        console.log('try fetch done');
-    </script>
-    <button onclick="IsInstalled ()">test search engine</button>
+    <button onclick="AddSearch()">test search provider</button>
     <br /><br />
-    To manage search engines.
+    Try to add searchProvider.
 </body>
