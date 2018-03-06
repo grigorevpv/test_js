@@ -3,11 +3,11 @@ var app = express();
 var path = require('path');
 
 app.get('/', function (req, res) {
-    console.log('connection start');
+    console.log(req.query.data);
     res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Example app listening on port 5000!');
 });
