@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
     <ShortName>Поиск Mail.Ru</ShortName>
     <Description>Search with Поиск Mail.Ru</Description>
     <InputEncoding>utf-8</InputEncoding>
@@ -10,5 +10,4 @@
     <Url type="application/x-suggestions+xml" template="https://suggests.go.mail.ru/ie8?q={searchTerms}"/>
     <Url type="application/opensearchdescription+xml" rel="self" template="https://go.mail.ru/opensearch.xml"/>
     <moz:SearchForm>https://go.mail.ru/</moz:SearchForm>
-    </OpenSearchDescription>
 </OpenSearchDescription>
