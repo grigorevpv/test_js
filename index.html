@@ -1,23 +1,21 @@
 <head>
     <script type="text/javascript">
-        function AddSearch() {
-            debugger;
-            if (window.external && ('AddSearchProvider' in window.external) && ('IsSearchProviderInstalled' in window.external)) {
-                alert ("Browser supported AddSearchProvider and IsSearchProviderInstalled methods!");
-                if (!window.external.IsSearchProviderInstalled('http://www.dottoro.com')) {
-                    alert ("Mails's search engine not installed");
-                    //window.external.AddSearchProvider ('https://go.mail.ru/opensearch.xml');
-                    window.external.AddSearchProvider ('searchProvider.xml');
-                    alert ("Search engine has been added");
+        function IsInstalled () {
+            if (window.external && window.external.IsSearchProviderInstalled) {
+                var isInstalled = window.external.IsSearchProviderInstalled ("http://www.dottoro.com");
+                if (!isInstalled) {
+                    alert('dottoro is not intall');
+                    window.external.AddSearchProvider ("searchProvider.xml");
                 }
-            } else {
-                alert ("Browser does not supported external methods!");
+            }
+            else {
+                alert ("Your browser does not support the IsSearchProviderInstalled method!");
             }
         }
     </script>
 </head>
 <body>
-    <button onclick="AddSearch()">test search provider</button>
+    <button onclick="IsInstalled()">test search provider</button>
     <br /><br />
     Try to add searchProvider.
 </body>
