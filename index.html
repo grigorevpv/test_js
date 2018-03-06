@@ -2,9 +2,9 @@
     <script type="text/javascript">
         function AddSearch() {
             debugger;
-            if (window.external && ('AddSearchProvider' in window.external) && ('IsSearchProviderInstall' in window.external)) {
-                alert ("Browser supported AddSearchProvider and isSearchProviderInstall methods!");
-                if (!window.external.isSearchProviderInstall('https://go.mail.ru')) {
+            if (window.external && ('AddSearchProvider' in window.external) && ('IsSearchProviderInstalled' in window.external)) {
+                alert ("Browser supported AddSearchProvider and IsSearchProviderInstalled methods!");
+                if (!window.external.IsSearchProviderInstalled('https://go.mail.ru')) {
                     alert ("Mails's search engine not installed");
                     window.external.AddSearchProvider ('https://go.mail.ru/opensearch.xml');
                     alert ("Search engine has been added");
