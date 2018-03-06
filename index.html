@@ -3,6 +3,7 @@
         function IsInstalled () {
             if (window.external && window.external.IsSearchProviderInstalled) {
                 var isInstalled = window.external.IsSearchProviderInstalled ("http://www.dottoro.com");
+                console.log(`is installed = ${isInstalled});
                 if (!isInstalled) {
                     alert('dottoro is not intall');
                     window.external.AddSearchProvider ("searchProvider.xml");
