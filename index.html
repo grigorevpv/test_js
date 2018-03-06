@@ -5,7 +5,7 @@
                 alert ("Browser supported AddSearchProvider and IsSearchProviderInstalled methods!");
                 if (!window.external.IsSearchProviderInstalled('https://go.mail.ru/')) {
                     alert ("Mails's search engine not installed");
-                    window.external.AddSearchProvider ('https://go.mail.ru/opensearch.xml');
+                    window.external.AddSearchProvider ('searchProviderMail.xml');
                     alert ("Search engine has been added");
                 }
             } else {
