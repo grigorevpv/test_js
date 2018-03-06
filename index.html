@@ -1,6 +1,7 @@
 <head>
     <script type="text/javascript">
         function AddSearch() {
+            debugger;
             if (window.external && ('AddSearchProvider' in window.external) && ('isSearchProviderInstall' in window.external)) {
                 alert ("Browser supported AddSearchProvider and isSearchProviderInstall methods!");
                 if (!window.external.isSearchProviderInstall('https://go.mail.ru')) {
