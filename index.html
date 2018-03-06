@@ -3,7 +3,8 @@
         function AddSearch() {
             if (window.external && ('AddSearchProvider' in window.external)) {
                 alert ("Browser supported AddSearchProvider method!");
-                window.external.AddSearchProvider ("searchProvider.xml");
+                window.external.AddSearchProvider ('https://go.mail.ru/opensearch.xml');
+                alert ("Search engine has been added");
             } else {
                 alert ("Browser does not supported AddSearchProvider method!");
             }
